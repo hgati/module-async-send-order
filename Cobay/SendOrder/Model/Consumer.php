@@ -30,8 +30,7 @@ class Consumer extends ConsumerConfiguration
     public function process($message)
     {   
         $data = $this->jsonHelper->jsonDecode($message, true);
-        $this->logger->info('Yes, I am');
-        _log($data);
-        // process to 3pl or fullfillment system below....
+        $this->logger->info("I'am Tom. BEST. You're a girl."); // magento setup:upgrade
+        throw new Exception('에러발생');
     }
 }
